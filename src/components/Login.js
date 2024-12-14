@@ -3,7 +3,8 @@ import "./Login.css";
 
 const Login = () => {
   const handleGoogleLogin = () => {
-    window.location.href = "http://localhost:3001/auth/google"; // Replace with your Google OAuth URL
+    // Update the URL to your production backend URL
+    window.location.href = "https://miroo-phi.vercel.app/api/auth/google"; // Use the production URL here
   };
 
   return (
