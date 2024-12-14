@@ -122,17 +122,17 @@ const Dashboard = () => {
   const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:3001/auth/user", { credentials: "include" })
+    fetch("https://miroo-phi.vercel.app/auth/user", { credentials: "include" }) // Updated to production URL
       .then((response) => response.json())
       .then((data) => setUser(data.user));
 
-    fetch("http://localhost:3001/api/emails", { credentials: "include" })
+    fetch("https://miroo-phi.vercel.app/api/emails", { credentials: "include" }) // Updated to production URL
       .then((response) => response.json())
       .then((data) => setEmails(data));
   }, []);
 
   const handleLogout = () => {
-    window.location.href = "http://localhost:3001/auth/logout";
+    window.location.href = "https://miroo-phi.vercel.app/auth/logout"; // Updated to production URL
   };
 
   const handleProfileClick = () => {
