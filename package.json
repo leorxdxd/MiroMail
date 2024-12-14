@@ -1,21 +1,20 @@
 {
-  "name": "canva-like-app-backend",
+  "name": "canva-like-app",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",  // Start Express server
+    "build": "react-scripts build",  // Build React app
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eject": "react-scripts eject"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
-    "cookie-session": "^2.1.0",
-    "dotenv": "^16.4.7",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "^5.0.1",
     "express": "^4.21.2",
     "passport": "^0.7.0",
     "passport-google-oauth20": "^2.0.0",
-    "passport-facebook": "^latest-version"
-
+    "dotenv": "^16.4.7"
   }
 }
