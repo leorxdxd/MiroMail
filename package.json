@@ -3,10 +3,9 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",  // Start Express server
-    "build": "react-scripts build",  // Build React app
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "eject": "react-scripts eject"
+    "start": "node server.js",
+    "build": "react-scripts build",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -15,6 +14,7 @@
     "express": "^4.21.2",
     "passport": "^0.7.0",
     "passport-google-oauth20": "^2.0.0",
+    "passport-facebook": "^latest-version",
     "dotenv": "^16.4.7"
   }
 }
