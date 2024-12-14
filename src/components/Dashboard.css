@@ -1,0 +1,291 @@
+/* Dashboard.css */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.dashboard-header {
+    background-color: #6200ea;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dashboard-header h1 {
+    margin: 0;
+    font-size: 2rem; /* Larger font size for better readability */
+    font-weight: 600; 
+    font-family: 'Helvetica Neue', Arial, sans-serif; 
+    font-style: normal;
+    color: #333;
+    border-bottom: 2px solid #f2f2f2; 
+    padding-bottom: 10px; 
+    text-align: center; 
+}
+
+.user-actions span {
+    margin-right: 1rem;
+}
+
+.logout-btn {
+    background-color: #ff5252;
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.logout-btn svg {
+    margin-right: 0.5rem;
+}
+
+.dashboard-content {
+    display: flex;
+    flex: 1;
+}
+
+.dashboard-sidebar {
+    width: 250px;
+    background-color: #3700b3;
+    color: white;
+    padding: 1rem;
+}
+
+.dashboard-sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.dashboard-sidebar nav ul li {
+    padding: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.dashboard-sidebar nav ul li svg {
+    margin-right: 1rem;
+}
+
+.dashboard-sidebar nav ul li:hover,
+.dashboard-sidebar nav ul li.active {
+    background-color: #6200ea;
+}
+
+.dashboard-main {
+    flex: 1;
+    padding: 1rem;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.compose-email {
+    margin-bottom: 1rem;
+}
+
+.compose-btn {
+    background-color: #6200ea;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.compose-modal {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 1.5rem;
+    margin: 1rem 0;
+}
+
+.compose-modal h2 {
+    margin-top: 0;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.send-btn {
+    background-color: #6200ea;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.close-btn {
+    background-color: #ff5252;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.email-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.email-card {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.placeholder {
+    text-align: center;
+    margin-top: 2rem;
+    color: #999;
+}
+
+/* Design editor styles */
+.canvas {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+.draggable-element {
+    position: absolute;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.delete-btn {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 50%;
+}
+
+.canvas.drag-over {
+    background-color: #f0f0f0;
+}
+
+/* Design toolbar styles */
+.design-toolbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #6200ea;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.design-toolbar button {
+    background-color: #3700b3;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.design-toolbar button:hover {
+    background-color: #2900a6;
+}
+
+/* Toggle buttons for Design and Text mode */
+.mode-toggle button.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.profile-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-menu {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 10;
+}
+
+.profile-menu button {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    text-align: left;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.profile-menu button:hover {
+    background-color: #f0f0f0;
+}
+
+/* Additional Modal and Canvas styles */
+.toggle-design {
+    background-color: #03dac6;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 1rem 0;
+}
+
+.toggle-design:hover {
+    background-color: #018786;
+}
+
+/* Tooltip for draggable elements */
+.draggable-element:hover .delete-btn {
+    visibility: visible;
+}
